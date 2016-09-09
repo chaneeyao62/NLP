@@ -54,7 +54,7 @@ for index in range(len(tokens)):
     if tokens[index] not in dictionary:
         dictionary.update({tokens[index]:1})
     else:
-        dictionary[tokens[index]] = dictionary[tokens[index]]+1
+        dictionary[tokens[index]] = dictionary[tokens[index]]+1"""
     
 <<<<<<< Updated upstream
 
@@ -66,7 +66,11 @@ valSum = sum(dictionary.values())
 prob = [x / valSum for x in values]
 
 random1 = numpy.random.choice(dictionary.keys(), p = prob)
+<<<<<<< HEAD
 =======
-print dictionary"""
     
 >>>>>>> Stashed changes
+=======
+random2 = numpy.random.choice(dictionary.keys(), p = prob)
+random3 = numpy.random.choice(dictionary.keys(), p = prob)
+>>>>>>> origin/master
