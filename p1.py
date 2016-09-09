@@ -42,7 +42,6 @@ for index in range(len(tokens)):
 
 #Random Generator
 
-test = numpy.random.choice(["a","b","c"], p=[0.2,0.3,0.5])
 values = dictionary.values()
 valSum = sum(dictionary.values())
 prob = [x / valSum for x in values]
