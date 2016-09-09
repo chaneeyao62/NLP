@@ -38,12 +38,6 @@ for i in range(0,300):
           else:
               dictionary[tokens[index]] = dictionary[tokens[index]]+1
 
-print dictionary
-
-
-
-
-
 """with open('data_corrected/classification task/autos/train_docs/autos_file0.txt','r') as myfile:
     file = myfile.read()
 #file = open('data_corrected/classification task/autos/train_docs/autos_file0.txt','r')
@@ -67,6 +61,7 @@ prob = [x / valSum for x in values]
 
 random1 = numpy.random.choice(dictionary.keys(), p = prob)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> Stashed changes
@@ -74,3 +69,19 @@ random1 = numpy.random.choice(dictionary.keys(), p = prob)
 random2 = numpy.random.choice(dictionary.keys(), p = prob)
 random3 = numpy.random.choice(dictionary.keys(), p = prob)
 >>>>>>> origin/master
+=======
+random2 = numpy.random.choice(dictionary.keys(), p = prob)
+random3 = numpy.random.choice(dictionary.keys(), p = prob)
+>>>>>>> origin/master
+
+
+
+
+##re.replace(orinical, re_for_email,"")
+
+
+
+## x 1 = text
+x2 = x.split()
+x3 = [a for a in x2 if '@' not in a]   '[at]'
+
