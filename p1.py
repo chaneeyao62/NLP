@@ -10,6 +10,7 @@ with open('data_corrected/classification task/autos/train_docs/autos_file0.txt',
 #file = open('data_corrected/classification task/autos/train_docs/autos_file0.txt','r')
 
 
+<<<<<<< Updated upstream
 sentence = "At eight o'clock on Thursday morning Arthur didn't feel very very good. on Monday morning Arthur feels better"
 tokens = nltk.word_tokenize(sentence)
 =======
@@ -17,6 +18,15 @@ a = 101
 
 import nltk, re, pprint
 from nltk import word_tokenize
+>>>>>>> Stashed changes
+=======
+sentence = "At eight o'clock on Thursday morning Arthur didn't feel very very good . on Monday morning Arthur feels better"
+#tokens = nltk.word_tokenize(file)
+tokens = file.split()
+beginIndex = tokens.index('Subject')+2
+tokens = tokens[beginIndex:]
+tokens = [item for item in tokens if '@' not in item]
+tokens = [item for item in tokens if item is not '>']
 >>>>>>> Stashed changes
 
 #Building Dictionary
