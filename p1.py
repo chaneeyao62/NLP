@@ -5,8 +5,6 @@ import numpy
 with open('data_corrected/classification task/autos/train_docs/autos_file0.txt','r') as myfile:
     file = myfile.read()
 
-
-sentence = "At eight o'clock on Thursday morning Arthur didn't feel very very good . on Monday morning Arthur feels better"
 tokens = file.split()
 beginIndex = tokens.index('Subject')+2
 tokens = tokens[beginIndex:]
