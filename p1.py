@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 from __future__ import division
 import nltk, re, pprint
 from nltk import word_tokenize
@@ -10,16 +9,14 @@ with open('data_corrected/classification task/autos/train_docs/autos_file0.txt',
 #file = open('data_corrected/classification task/autos/train_docs/autos_file0.txt','r')
 
 
-<<<<<<< Updated upstream
+
 sentence = "At eight o'clock on Thursday morning Arthur didn't feel very very good. on Monday morning Arthur feels better"
 tokens = nltk.word_tokenize(sentence)
-=======
-a = 101
+
 
 import nltk, re, pprint
 from nltk import word_tokenize
->>>>>>> Stashed changes
-=======
+
 sentence = "At eight o'clock on Thursday morning Arthur didn't feel very very good . on Monday morning Arthur feels better"
 #tokens = nltk.word_tokenize(file)
 tokens = file.split()
@@ -27,7 +24,7 @@ beginIndex = tokens.index('Subject')+2
 tokens = tokens[beginIndex:]
 tokens = [item for item in tokens if '@' not in item]
 tokens = [item for item in tokens if item is not '>']
->>>>>>> Stashed changes
+
 
 #Building Dictionary
 dictionary = {}
@@ -60,8 +57,6 @@ for index in range(len(tokens)):
     else:
         dictionary[tokens[index]] = dictionary[tokens[index]]+1"""
     
-<<<<<<< Updated upstream
-
 
 #Random Generator
 test = numpy.random.choice(["a","b","c"], p=[0.2,0.3,0.5])
@@ -70,19 +65,9 @@ valSum = sum(dictionary.values())
 prob = [x / valSum for x in values]
 
 random1 = numpy.random.choice(dictionary.keys(), p = prob)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
->>>>>>> Stashed changes
-=======
 random2 = numpy.random.choice(dictionary.keys(), p = prob)
 random3 = numpy.random.choice(dictionary.keys(), p = prob)
->>>>>>> origin/master
-=======
-random2 = numpy.random.choice(dictionary.keys(), p = prob)
-random3 = numpy.random.choice(dictionary.keys(), p = prob)
->>>>>>> origin/master
+
 
 
 
