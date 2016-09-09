@@ -30,3 +30,5 @@ valSum = sum(dictionary.values())
 prob = [x / valSum for x in values]
 
 random1 = numpy.random.choice(dictionary.keys(), p = prob)
+random2 = numpy.random.choice(dictionary.keys(), p = prob)
+random3 = numpy.random.choice(dictionary.keys(), p = prob)
