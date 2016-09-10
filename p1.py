@@ -78,7 +78,7 @@ def random_generator_unigram(dictonary):
     
     return sentence + '.'
 
-def random_generator_unigram(dictionary1, dictionary2):
+def random_generator_bigram(dictionary1, dictionary2):
     #generating the first word
     values = dictionary1.values()
     valSum = sum(dictionary1.values())
