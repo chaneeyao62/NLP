@@ -75,9 +75,9 @@ def random_generator_unigram(dictonary):
     random  = numpy.random.choice(dictionary.keys(), p = prob)
     sentence = ''
     while(random != '.'):
-        sentence = sentence+random
+        sentence = sentence+' ' +random
         random = numpy.random.choice(dictionary.keys(), p = prob)
     
-    return sentence
+    return sentence + '.'
     
 
