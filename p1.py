@@ -70,13 +70,32 @@ def random_generator_unigram(dictonary):
     values = dictionary.values()
     valSum = sum(dictionary.values())
     prob = [x / valSum for x in values]
-
-    
     random  = numpy.random.choice(dictionary.keys(), p = prob)
     sentence = ''
     while(random != '.'):
         sentence = sentence+' ' +random
         random = numpy.random.choice(dictionary.keys(), p = prob)
+    
+    return sentence + '.'
+
+def random_generator_unigram(dictionary1, dictionary2):
+    #generating the first word
+    values = dictionary1.values()
+    valSum = sum(dictionary1.values())
+    prob = [x / valSum for x in values]
+    first  = numpy.random.choice(dictionary1.keys(), p = prob)
+    
+    diction_prob = dictionary2
+    for k in diction_prob:
+        valSum = sum(diction_prob[k].values())
+        for key,value in diction_prob[k].items():
+            diction_prob[k][key] = value/valSum
+    
+    sentence = first
+    random = numpy.random.choice(diction_prob[first].keys(), p = diction_prob[first].values())
+    while(random != '.' and random != '<s>'):
+        sentence = sentence+' ' +random
+        random = numpy.random.choice(diction_prob[random].keys(), p = diction_prob[random].values())
     
     return sentence + '.'
     
