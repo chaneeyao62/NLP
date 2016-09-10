@@ -1,5 +1,6 @@
 from __future__ import division
 import numpy
+import os
 
 
 with open('data_corrected/classification task/autos/train_docs/autos_file0.txt','r') as myfile:
@@ -65,4 +66,18 @@ else:
     dictionary2.update({tokens[len(tokens)-1]:{'<s>':1}})
     
 
+def random_generator_unigram(dictonary):
+    values = dictionary.values()
+    valSum = sum(dictionary.values())
+    prob = [x / valSum for x in values]
+
+    
+    random  = numpy.random.choice(dictionary.keys(), p = prob)
+    sentence = ''
+    while(random != '.'):
+        sentence = sentence+random
+        random = numpy.random.choice(dictionary.keys(), p = prob)
+    
+    return sentence
+    
 
